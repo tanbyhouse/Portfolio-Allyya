@@ -4,7 +4,7 @@
   --vivid-lilac: #6857e4;
   --liberty: #5b61b2;
   --thistle: #dec1db;
-  --white: #f2efee;
+  --white: #f5f5f5;
   --sky-blue: #2f80e4;
   --light-blue: #6da0e1;
   --soft-blue: #c0d6e2;
@@ -19,11 +19,7 @@
   --fsmall: 14px;
   --fmedium: 18px;
   --flarge: 24px;
-
-  --flight: 300;
-  --fmedium: 500;
-  --fsemibold: 600;
-  --fbold: 700;
+  --fxlarge: 56px;
 
   --ltight: 1px;
   --loose: 5px;
@@ -31,45 +27,48 @@
 
 * {
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--white);
-    color: white;
+  color: var(--white);
 }
 
-nav, .hero {
+nav, #hero {
   font-family: var(--onest);
+}
+
+#hero h1, #about h2, #projects h2 {
+  font-family: var(--pixelify);
 }
 
 nav {
   font-size: var(--fsmall);
-  font-weight: var(--flight);
+  font-weight: 300;
   letter-spacing: var(--ltight);
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    padding: 8px 24px;
-    margin: 1rem 5rem;
-    display: flex;
-    background-color: var(--vivid-lilac);
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-    border-radius: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 8px 24px;
+  margin: 1rem 5rem;
+  display: flex;
+  background-color: var(--vivid-lilac);
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 2rem;
 }
 
 .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 nav img {
@@ -80,36 +79,69 @@ nav img {
 
 .nav-left a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
-.hero, .about, .projects {
+#hero, #about, #projects {
   height: 100vh;
 }
-.hero {
-  background: linear-gradient(to bottom, var(--space-dark), var(--violet), var(--vivid-lilac));
-  text-align: center;
-}
-.about {
-  background: linear-gradient(to bottom, var(--sky-blue), var(--light-blue), var(--soft-blue));
-}
-.projects {
-  background: linear-gradient(to bottom, var(--sun), var(--breeze), var(--sand));
-}
-.hero {
+#hero {
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 6rem; */
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, var(--vivid-lilac) 0%, var(--violet) 60%, var(--space-dark)100%);
 }
 
-.hero p {
-  max-width: 50vw;
+.wrapper {
+    width: 100%;
 }
+
+#hero h1 {
+  margin-bottom: 2rem;
+  font-weight: 100;
+  font-size: var(--fxlarge);
+  letter-spacing: var(--ltight);
+}
+
+#hero p {
+  max-width: 50vw;
+  margin: 8px auto 3rem auto;
+  font-weight: 100;
+  letter-spacing: var(--ltight);
+}
+
+.hero-cta {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  border: var(--white) solid 1px;
+  border-radius: 2rem;
+  transition: 0.3s ease-in-out;
+  background-color: var(--white);
+  color: var(--liberty);
+  box-shadow: var(--vivid-lilac) 0px 0px 35px 0px;
+  box-shadow: var(--vivid-lilac) 0px 0px 15px 0px;
+}
+
+.hero-cta:hover {
+  background-color: var(--vivid-lilac);
+  color: var(--white);
+  box-shadow: var(--white) 0px 0px 200px 0px;
+}
+
+#about {
+  background: linear-gradient(to bottom, var(--sky-blue), var(--light-blue), var(--soft-blue));
+}
+#projects {
+  background: linear-gradient(to bottom, var(--sun), var(--breeze), var(--sand));
+}
+
