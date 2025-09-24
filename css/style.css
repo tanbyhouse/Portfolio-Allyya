@@ -11,7 +11,7 @@
   --breeze: #92ada4;
   --sand: #f2d6a1;
   --saddle: #84572f;
-  --sun: #f1a805;
+  --sun: #F4D160;
 
   --onest: "Onest", sans-serif;
   --pixelify: "Pixelify Sans", sans-serif;
@@ -35,18 +35,22 @@ body {
   color: var(--white);
 }
 
-nav, #hero {
+nav, #hero, #about {
   font-family: var(--onest);
 }
 
-#hero h1, #about h2, #projects h2 {
+#hero h1, #about h1, #projects h1 {
   font-family: var(--pixelify);
+  font-size: var(--fxlarge);
+  font-weight: 100;
+  letter-spacing: var(--ltight);
+  margin-bottom: 2rem;
 }
 
 nav {
   font-size: var(--fsmall);
   font-weight: 300;
-  letter-spacing: var(--ltight);
+  letter-spacing: 100;
 }
 
 nav {
@@ -105,13 +109,6 @@ nav ul {
     width: 100%;
 }
 
-#hero h1 {
-  margin-bottom: 2rem;
-  font-weight: 100;
-  font-size: var(--fxlarge);
-  letter-spacing: var(--ltight);
-}
-
 #hero p {
   max-width: 50vw;
   margin: 8px auto 3rem auto;
@@ -139,9 +136,47 @@ nav ul {
 }
 
 #about {
+  padding: 5rem;
   background: linear-gradient(to bottom, var(--sky-blue), var(--light-blue), var(--soft-blue));
 }
+
+#about .container {
+  background: linear-gradient(to bottom, var(--soft-blue) 40%, var(--white) 83%, var(--light-blue)10%);
+  padding: 3rem 5rem 0 5rem;
+  color: var(--sky-blue);
+  border: none;
+  border-radius: 3rem;
+  display: flex;  
+}
+
+#about p {
+  color: #02457a;
+  margin-bottom: 1rem;
+  line-height: 1.7rem;
+}
+
+.toolkit {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.toolkit-title {
+  margin-top: 2.5rem;
+}
+.toolkit img {
+  max-height: 50px;
+}
+/* .astronaut {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
+
 #projects {
-  background: linear-gradient(to bottom, var(--sun), var(--breeze), var(--sand));
+  /* background: linear-gradient(to bottom, var(--sun), var(--breeze), var(--sand)); */
+  background: linear-gradient(to bottom, var(--soft-blue)0%, var(--sand)50%, var(--sun) 100%);
+
 }
 
