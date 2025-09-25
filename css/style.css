@@ -52,9 +52,6 @@ nav {
   font-size: var(--fsmall);
   font-weight: 300;
   letter-spacing: 100;
-}
-
-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +65,7 @@ nav {
   align-items: center;
   border: none;
   border-radius: 2rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .nav-left {
